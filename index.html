@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://api.fontshare.com/v2/css?f[]=general-sans@500,600,400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Dashboard</title>
+</head>
+<body>
+    <div class="wrapper">
+        <aside class="sidebar">
+            <div class="brand-logo">
+                <img src="assets/logo.svg" width="15%" alt="">
+                <img src="assets/brand-logo.svg" width="35%" alt="">
+                <button class="button-sidebar" onclick="sideBar()">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+            <ul class="navbar-item">
+                <li class="nav-item">
+                    <a href="#" class="nav-link active">
+                        <img src="assets/icons/dashboard.svg" alt="">
+                        <span class="text-link">Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <img src="assets/icons/chart.svg" alt="">
+                        <span class="text-link">Analytics</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <img src="assets/icons/wallet.svg" alt="">
+                        <span class="text-link">My Wallet</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <img src="assets/icons/user.svg" alt="">
+                        <span class="text-link">Accounts</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <img src="assets/icons/setting.svg" alt="">
+                        <span class="text-link">Settings</span>
+                    </a>
+                </li>
+            </ul>
+            <!-- line -->
+            <hr class="strip-line">
+            <!-- end -->
+            <ul class="navbar-item">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <img src="assets/icons/security.svg" alt="">
+                        <span class="text-link">Security</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <img src="assets/icons/help-centre.svg" alt="">
+                        <span class="text-link">Help Centre</span>
+                    </a>
+                </li>
+                <li class="dark-mode">
+                    <div class="icon">
+                        <img src="assets/icons/moon.svg" alt="">
+                        <span class="text-link">Dark Mode</span>
+                    </div>
+                    <div class="switch-button"></div>
+                </li>
+            </ul>
+            <div class="account">
+                <div class="user-account">
+                    <img src="assets/avatar.png" class="img-avatar" alt="">
+                    <div class="name-account">
+                        <h1>Ahmad Zaki</h1>
+                        <p>Frontend Developer</p>
+                    </div>
+                </div>
+                <div class="arrow-icon">
+                    <img src="assets/icons/arrow.svg" alt="">
+                </div>
+            </div>
+        </aside>
+        <!-- main content -->
+        <div class="main-content">
+            <div class="page-header">
+                <div class="page-title">
+                    <h1>Welcome Back, Zaki 👋</h1>
+                    <p>Here’s what’s happening with your store today.</p>
+                </div>
+                <div class="search-button">
+                    <input type="search" class="form-input" placeholder="Search for anything...">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+            <div class="content-grid">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-logo bg-success">
+                            <img src="assets/icons/arrow-bottom.svg" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h5>Total Income</h5>
+                            <p>$632.000</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-logo bg-primary">
+                            <img src="assets/icons/arrow-up.svg" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h5>Total Outcome</h5>
+                            <p>$632.000</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-title">
+                        <h1>My Card</h1>
+                    </div>
+                    <div class="card-balance">
+                        <h5>Card Balance</h5>
+                        <p>$15,595.015</p>
+                    </div>
+                    <div class="card-box">
+                        <div class="card-box-content">
+                            <img src="assets/icons/mastercard_logo.png" alt="">
+                            <h5>Current Balance</h5>
+                            <p>$5,750,20</p>
+                            <span>5282 3456 7890 1289</span>
+                        </div>
+                    </div>
+                    <div class="button-card">
+                        <button class="btn btn-primary">Manage Cards</button>
+                        <button class="btn btn-outline">Transfer</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-title">
+                        <h1>Analytics</h1>
+                    </div>
+                    <div class="card-chart">
+                        <canvas id="myChart" style="height:45vh; width:100%"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end -->
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById('myChart');
+      
+        new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: ['Jan', 'Feb', 'Mar', 'Api', 'May', 'Jun', 'Aug'],
+                datasets: [
+                    {
+                        label: 'Income',
+                        data: [100, 300, 240, 230, 410, 110, 123],
+                        backgroundColor: '#64CFF6'
+                    },
+                    {
+                        label: 'Outcome',
+                        data: [120, 210, 523, 137, 228, 312, 241],
+                        backgroundColor: '#6359E9'
+                    },
+                ]
+          },
+          options: {
+            responsive: true,
+            borderRadius: 50,
+            barThickness: 10,
+            scales: {
+              y: {
+                beginAtZero: true,
+                grid: {
+                    display: true,
+                    color: "rgba(140, 137, 180, 50%)",
+                },
+              },
+              x: {
+                grid: {
+                    display: false,
+                },
+              }
+            }
+          }
+        });
+      </script>
+</body>
+</html>
